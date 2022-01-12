@@ -111,8 +111,8 @@ int main( int argc, char *argv[] ) {
   auto source = read_file("../mandelbrot.cl");
   auto program = build(ctx, d, source);
 
-  const size_t img_width = 1200;
-  const size_t img_height = 800;
+  const size_t img_width = 16384;
+  const size_t img_height = 16384;
 
   // Create kernel
   cl_kernel kernel = clCreateKernel(program, "mandelbrot", &err);
